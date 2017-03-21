@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @EnableBinding(Sink.class)
 public class InputSink {
-	@ServiceActivator(inputChannel=Sink.INPUT)
+	@ServiceActivator//(inputChannel=Sink.INPUT)
 	public void loggerSink(Object payload) {
 		log.info("Received: " + payload);
 	}

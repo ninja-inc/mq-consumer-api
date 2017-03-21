@@ -8,5 +8,5 @@ spring:
   cloud:
     stream:
       bindings:
-        output:
+        input:
           destination: test1
