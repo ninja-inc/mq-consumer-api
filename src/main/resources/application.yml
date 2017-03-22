@@ -1,12 +1,14 @@
-spring.application.name: mq-consumer-api
-
-spring.rabbitmq:
-  addresses: 127.0.0.1
-  port: 5672
-
 spring:
-  cloud:
-    stream:
-      bindings:
-        input:
-          destination: test1
+  application.name: mq-consumer-api
+
+  rabbitmq:
+    addresses: 127.0.0.1
+    port: 5672
+
+  jackson.serialization:
+    write-dates-as-timestamps: false
+
+  cloud.stream.bindings:
+    input:
+      destination: test1
+      contentType: application/json
